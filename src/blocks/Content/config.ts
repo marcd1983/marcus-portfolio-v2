@@ -17,7 +17,6 @@ import {
 } from '@payloadcms/richtext-lexical'
 
 import { link } from '@/fields/link'
-import { TableFeatureClient } from '@payloadcms/richtext-lexical/client'
 
 const columnFields: Field[] = [
   {

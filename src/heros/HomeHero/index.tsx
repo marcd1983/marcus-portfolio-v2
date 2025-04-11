@@ -1,5 +1,4 @@
 'use client'
-import React, { useEffect } from 'react'
 import type { Page } from '@/payload-types'
 import Link from 'next/link'
 

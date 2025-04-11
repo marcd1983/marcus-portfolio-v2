@@ -3,7 +3,6 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { icons } from 'lucide-react'
 import type { Header as HeaderType } from '@/payload-types'
 
 interface SocialNavProps {

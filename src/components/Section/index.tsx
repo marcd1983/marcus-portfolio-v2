@@ -3,8 +3,6 @@ import { cn } from '@/utilities/ui'
 import { CMSLink } from '../Link'
 import React, { Fragment } from 'react'
 import { motion } from 'framer-motion'
-import { useScroll } from 'framer-motion'
-import type { Post } from '@/payload-types'
 import type { Project } from '@/payload-types'
 
 import { Media } from '@/components/Media'
@@ -40,7 +38,6 @@ export const Section: React.FC<{
   const subTitleToUse = subTitleFromProps || subTitle
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   const href = `/${relationTo}/${slug}`
-  const { scrollYProgress } = useScroll()
   // const imageScale = useTransform(scrollYProgress, [0, 1], [0.7, 1])
   return (
     <article

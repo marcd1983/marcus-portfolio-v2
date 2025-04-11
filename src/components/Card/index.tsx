@@ -5,7 +5,6 @@ import Link from 'next/link'
 import React, { Fragment } from 'react'
 
 import type { Post } from '@/payload-types'
-import type { Project } from '@/payload-types'
 
 import { Media } from '@/components/Media'
 
