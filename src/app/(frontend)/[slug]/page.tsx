@@ -5,6 +5,7 @@ import configPromise from '@payload-config'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
+// import type { Page as PageType } from '@/payload-types'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { RenderHero } from '@/heros/RenderHero'
 import { generateMeta } from '@/utilities/generateMeta'
@@ -48,6 +49,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   let page: RequiredDataFromCollectionSlug<'pages'> | null
 
+  // eslint-disable-next-line prefer-const
   page = await queryPageBySlug({
     slug,
   })

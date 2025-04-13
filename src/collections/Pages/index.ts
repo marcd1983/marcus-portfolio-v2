@@ -64,11 +64,6 @@ export const Pages: CollectionConfig<'pages'> = {
     {
       name: 'title',
       type: 'text',
-      // admin: {
-      //   components: {
-      //     Cell: '@/fields/CellComponent#CellComponent',
-      //   },
-      // },
       required: true,
     },
     {
