@@ -58,6 +58,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Marcus DeLeon Creative Posts`,
+    title: `Payload Website Template Posts`,
   }
 }

@@ -69,7 +69,7 @@ export const ArchiveBlock: React.FC<
           <RichText className="ms-0 max-w-[48rem]" data={introContent} enableGutter={false} />
         </div>
       )}
-      <CollectionArchive items={items} relationTo={collection} />{' '}
+      <CollectionArchive items={items} relationTo={collection} />
       {/* Passing the collection prop */}
     </div>
   )

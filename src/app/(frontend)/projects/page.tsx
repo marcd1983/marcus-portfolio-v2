@@ -1,6 +1,6 @@
 // projects/page.tsx
 import type { Metadata } from 'next/types'
-import { CollectionArchive } from '@/components/CollectionArchive'
+import { CollectionList } from '@/components/CollectionList'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
@@ -35,7 +35,7 @@ export default async function Page() {
       </div>
 
       {/* Pass the projects data and relationTo as 'projects' */}
-      <CollectionArchive items={projects.docs} relationTo="projects" />
+      <CollectionList items={projects.docs} />
     </div>
   )
 }

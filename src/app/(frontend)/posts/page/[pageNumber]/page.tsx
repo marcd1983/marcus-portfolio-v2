@@ -51,7 +51,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         />
       </div>
 
-      <CollectionArchive posts={posts.docs} />
+      <CollectionArchive items={posts.docs} />
 
       <div className="container">
         {posts?.page && posts?.totalPages > 1 && (
@@ -65,7 +65,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { pageNumber } = await paramsPromise
   return {
-    title: `Marcus DeLeon Creative Posts Page ${pageNumber || ''}`,
+    title: `Payload Website Template Posts Page ${pageNumber || ''}`,
   }
 }
 

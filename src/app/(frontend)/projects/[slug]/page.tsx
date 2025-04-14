@@ -7,7 +7,6 @@ import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
 import RichText from '@/components/RichText'
-
 import type { Project } from '@/payload-types'
 
 import { ProjectHero } from '@/heros/ProjectHero'
@@ -62,12 +61,6 @@ export default async function Project({ params: paramsPromise }: Args) {
       <div className="flex flex-col items-center gap-4 pt-8">
         <div className="container">
           <RichText className="" data={project.content} enableGutter={false} />
-          {/* {project.relatedProjects && project.relatedProjects.length > 0 && (
-            <RelatedProjects
-              className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr]"
-              docs={project.relatedProjects.filter((project) => typeof project === 'object')}
-            />
-          )} */}
         </div>
       </div>
     </article>

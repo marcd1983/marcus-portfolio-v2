@@ -6,7 +6,7 @@ import { Card, CardPostData } from '@/components/Card'
 // Define the type for both posts and projects
 export type Props = {
   items: CardPostData[] // Can be posts or projects
-  relationTo?: 'posts' | 'projects' // Ensure relationTo can be either posts or projects
+  relationTo?: 'posts' | 'projects'
 }
 
 export const CollectionArchive: React.FC<Props> = (props) => {
