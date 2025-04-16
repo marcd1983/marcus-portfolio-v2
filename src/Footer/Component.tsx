@@ -4,7 +4,7 @@ import React from 'react'
 
 import type { Footer } from '@/payload-types'
 
-import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+// import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { CMSLink } from '@/components/Link'
 // import { Logo } from '@/components/Logo/Logo'
 
@@ -26,7 +26,7 @@ export async function Footer() {
               return <CMSLink key={i} {...link} />
             })}
           </nav>
-          <ThemeSelector />
+          {/* <ThemeSelector /> */}
         </div>
       </div>
     </footer>
