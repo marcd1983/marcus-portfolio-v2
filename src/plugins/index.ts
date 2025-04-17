@@ -95,7 +95,7 @@ export const plugins: Plugin[] = [
     collections: {
       media: true,
     },
-    token: process.env.VERCEL_BLOB_STORAGE_TOKEN,
+    token: process.env.BLOB_READ_WRITE_TOKEN,
   }),
   payloadCloudPlugin(),
 ]
