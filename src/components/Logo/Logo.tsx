@@ -23,7 +23,7 @@ export const Logo = (props: Props) => {
       fetchPriority={priority}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[72px]', className)}
-      src="/media/marc-logo.svg"
+      src="https://6kqgfo1rygugutgb.public.blob.vercel-storage.com/marc-del-logo.svg"
     />
   )
 }
