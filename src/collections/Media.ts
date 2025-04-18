@@ -48,7 +48,6 @@ export const Media: CollectionConfig = {
     mimeTypes: [
       'image/jpeg',
       'image/png',
-      'image/gif',
       'image/svg+xml',
       'image/webp',
       'video/mp4',
