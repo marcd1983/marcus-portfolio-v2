@@ -51,7 +51,6 @@ export const Media: CollectionConfig = {
       'image/gif',
       'image/svg+xml',
       'image/webp',
-      'image/avif',
       'video/mp4',
       'video/webm',
     ],
