@@ -36,7 +36,7 @@ export default async function Page() {
       </div>
 
       {/* Pass the projects data and relationTo as 'projects' */}
-      <CollectionArchive items={projects.docs} />
+      <CollectionArchive items={projects.docs} relationTo="projects" />
     </div>
   )
 }

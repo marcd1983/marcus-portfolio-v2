@@ -1,7 +1,7 @@
 'use client'
 
 import React, { Fragment } from 'react'
-import Link from 'next/link'
+import { CMSLink } from '../Link'
 import { cn } from '@/utilities/ui'
 import useClickableCard from '@/utilities/useClickableCard'
 import { Media } from '@/components/Media'
@@ -49,7 +49,7 @@ export const Card: React.FC<CardProps> = ({
   showCategories = false,
   title: titleFromProps,
 }) => {
-  const { card, link } = useClickableCard({})
+  const { card } = useClickableCard({})
   const { slug, categories, meta, title } = doc || {}
   const { description, image: metaImage } = meta || {}
 
@@ -78,9 +78,9 @@ export const Card: React.FC<CardProps> = ({
         {showCategories && <CategoryList categories={categories} />}
         {titleToUse && (
           <h3 className="text-lg font-semibold mb-2">
-            <Link href={href} className="hover:underline" ref={link.ref}>
+            <CMSLink url={href || ''} className="hover:underline">
               {titleToUse}
-            </Link>
+            </CMSLink>
           </h3>
         )}
         {sanitizedDescription && (
