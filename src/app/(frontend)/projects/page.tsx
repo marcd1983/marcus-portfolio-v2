@@ -1,10 +1,11 @@
 // projects/page.tsx
 import type { Metadata } from 'next/types'
-import { CollectionList } from '@/components/CollectionList'
+
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
 import PageClient from './page.client'
+import { CollectionArchive } from '@/components/CollectionArchive'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -35,7 +36,7 @@ export default async function Page() {
       </div>
 
       {/* Pass the projects data and relationTo as 'projects' */}
-      <CollectionList items={projects.docs} />
+      <CollectionArchive items={projects.docs} />
     </div>
   )
 }
