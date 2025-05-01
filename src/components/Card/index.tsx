@@ -65,7 +65,7 @@ export const Card: React.FC<CardProps> = ({
       )}
       ref={card.ref}
     >
-      <div className="relative w-full">
+      <CMSLink url={href || ''} className="relative w-full">
         {metaImage && typeof metaImage !== 'string' ? (
           <Media resource={metaImage} size="33vw" />
         ) : (
@@ -73,7 +73,7 @@ export const Card: React.FC<CardProps> = ({
             No image
           </div>
         )}
-      </div>
+      </CMSLink>
       <div className="p-4 text-left">
         {showCategories && <CategoryList categories={categories} />}
         {titleToUse && (
