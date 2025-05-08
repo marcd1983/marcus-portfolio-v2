@@ -1,53 +1,26 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
 import clsx from 'clsx'
+import Image from 'next/image'
+import React from 'react'
+import type { Media } from '@/payload-types'
 
 interface Props {
   className?: string
   loading?: 'lazy' | 'eager'
   priority?: 'auto' | 'high' | 'low'
+  logo?: Media
 }
 
-type HeaderData = {
-  logo?: {
-    url?: string
-    alt?: string
-  }
-}
-
-export const Logo = (props: Props) => {
-  const { loading: loadingFromProps, priority: priorityFromProps, className } = props
-  const [logoData, setLogoData] = useState<HeaderData | null>(null)
-
-  const loading = loadingFromProps || 'lazy'
-  const priority = priorityFromProps || 'low'
-
-  useEffect(() => {
-    const fetchHeader = async () => {
-      try {
-        const res = await fetch('/api/globals/header')
-        const json = await res.json()
-        setLogoData(json)
-      } catch (err) {
-        console.error('Failed to fetch header:', err)
-      }
-    }
-
-    fetchHeader()
-  }, [])
-
-  const logoUrl = logoData?.logo?.url
-
-  if (!logoUrl) {
-    return null // Or fallback to static logo if desired
+export const Logo: React.FC<Props> = ({ className, loading = 'lazy', priority = 'low', logo }) => {
+  if (!logo || typeof logo !== 'object' || !logo.url) {
+    return null // fallback or default static logo
   }
 
   return (
     <Image
-      src={logoUrl}
-      alt="Marcus De Leon Design"
+      src={logo.url}
+      alt={logo.alt || 'Site logo'}
       width={72}
       height={72}
       loading={loading}

@@ -36,7 +36,9 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
         <div className="py-4 flex flex-col md:flex-row justify-between gap-2">
           <Link className="flex flex-col md:flex-row justify-center items-center gap-2" href="/">
             <span>
-              <Logo loading="eager" priority="high" />
+              {typeof data.logo === 'object' && data.logo !== null && (
+                <Logo logo={data.logo} loading="eager" priority="high" />
+              )}
             </span>
             <h1 className="text-2xl font-medium">Marcus DeLeón</h1>
           </Link>
