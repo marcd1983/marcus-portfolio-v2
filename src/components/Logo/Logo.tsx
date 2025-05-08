@@ -33,6 +33,10 @@ export const Logo = ({ loading = 'lazy', priority = 'low', className }: Props) =
       <polyline className="logo-stroke" points="17.25 19.5 22.63 25.87 24.99 19.5" />
       <polyline className="logo-stroke" points="54.75 19.5 49.37 25.87 47.01 19.5" />
       <line className="logo-stroke" x1="36" y1="34.71" x2="36" y2="48.59" />
+      <style>{`
+        .logo-fill { fill: #293443; }
+        .logo-stroke { fill: none; stroke: #fff; stroke-width: 2px; }
+      `}</style>
     </svg>
   )
 }
