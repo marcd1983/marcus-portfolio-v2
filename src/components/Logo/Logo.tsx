@@ -1,5 +1,8 @@
+'use client'
+
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import clsx from 'clsx'
-import React from 'react'
 
 interface Props {
   className?: string
@@ -7,23 +10,49 @@ interface Props {
   priority?: 'auto' | 'high' | 'low'
 }
 
+type HeaderData = {
+  logo?: {
+    url?: string
+    alt?: string
+  }
+}
+
 export const Logo = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
+  const [logoData, setLogoData] = useState<HeaderData | null>(null)
 
   const loading = loadingFromProps || 'lazy'
   const priority = priorityFromProps || 'low'
 
+  useEffect(() => {
+    const fetchHeader = async () => {
+      try {
+        const res = await fetch('/api/globals/header')
+        const json = await res.json()
+        setLogoData(json)
+      } catch (err) {
+        console.error('Failed to fetch header:', err)
+      }
+    }
+
+    fetchHeader()
+  }, [])
+
+  const logoUrl = logoData?.logo?.url
+
+  if (!logoUrl) {
+    return null // Or fallback to static logo if desired
+  }
+
   return (
-    /* eslint-disable @next/next/no-img-element */
-    <img
+    <Image
+      src={logoUrl}
       alt="Marcus De Leon Design"
       width={72}
       height={72}
       loading={loading}
-      fetchPriority={priority}
-      decoding="async"
+      priority={priority === 'high'}
       className={clsx('max-w-[9.375rem] w-full h-[72px]', className)}
-      src="/api/media/file/marc-del-logo.svg"
     />
   )
 }
