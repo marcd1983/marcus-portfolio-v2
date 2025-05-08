@@ -1,31 +1,29 @@
-'use client'
-
 import clsx from 'clsx'
-import Image from 'next/image'
 import React from 'react'
-import type { Media } from '@/payload-types'
 
 interface Props {
   className?: string
   loading?: 'lazy' | 'eager'
   priority?: 'auto' | 'high' | 'low'
-  logo?: Media
 }
 
-export const Logo: React.FC<Props> = ({ className, loading = 'lazy', priority = 'low', logo }) => {
-  if (!logo || typeof logo !== 'object' || !logo.url) {
-    return null // fallback or default static logo
-  }
+export const Logo = (props: Props) => {
+  const { loading: loadingFromProps, priority: priorityFromProps, className } = props
+
+  const loading = loadingFromProps || 'lazy'
+  const priority = priorityFromProps || 'low'
 
   return (
-    <Image
-      src={logo.url}
-      alt={logo.alt || 'Site logo'}
+    /* eslint-disable @next/next/no-img-element */
+    <img
+      alt="Marcus De Leon Design"
       width={72}
       height={72}
       loading={loading}
-      priority={priority === 'high'}
+      fetchPriority={priority}
+      decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[72px]', className)}
+      src="/api/media/file/marc-del-logo.svg"
     />
   )
 }
