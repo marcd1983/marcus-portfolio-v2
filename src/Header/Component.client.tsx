@@ -9,7 +9,7 @@ import type { Header } from '@/payload-types'
 import { Logo } from '@/components/Logo/Logo'
 import { HeaderNav } from './Nav'
 import { SocialNav } from './SocialNav'
-import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+// import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 interface HeaderClientProps {
   data: Header
 }
@@ -45,7 +45,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
           </Link>
           <div className="flex flex-row items-center gap-4">
             <HeaderNav data={data} />
-            <ThemeSelector />
+            {/* <ThemeSelector /> */}
           </div>
         </div>
       </header>
