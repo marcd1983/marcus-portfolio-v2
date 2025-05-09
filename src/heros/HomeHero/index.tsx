@@ -16,11 +16,7 @@ export const HomeHero: React.FC<Page['hero']> = () => {
           I’m currently working with Rowe Group / Equipment Locator. 
         </p>
         {/* {richText && <RichText className="mb-6" data={richText} enableGutter={false} />} */}
-        <Link
-          href="#block-67ecafd4d7716e5d50e78d1b"
-          className="inline-block"
-          aria-label="Navigate to Portfolio"
-        >
+        <Link href="#project-list" className="inline-block" aria-label="Navigate to Portfolio">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="90.853"

@@ -12,7 +12,7 @@ export const CollectionList: React.FC<Props> = (props) => {
   const { items, relationTo } = props
 
   return (
-    <div className={cn('container')}>
+    <div id="project-list" className={cn('container')}>
       {items?.map((result, index) => {
         if (typeof result === 'object' && result !== null) {
           return (
