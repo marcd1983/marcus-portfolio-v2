@@ -70,7 +70,7 @@ export default async function Page({ params: paramsPromise }: Args) {
       {draft && <LivePreviewListener />}
 
       <RenderHero {...hero} />
-      <div className="container">
+      <div className="container mx-auto">
         <RenderBlocks blocks={layout} />
       </div>
     </article>

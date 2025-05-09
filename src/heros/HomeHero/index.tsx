@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const HomeHero: React.FC<Page['hero']> = () => {
   return (
-    <div className="container lg:h-[70vh] content-center">
+    <div className="container mx-auto lg:h-[70vh] content-center">
       <div className="text-left py-8">
         <h2 className="text-6xl md:text-8xl font-medium text-balance pb-6">
           Visual Designer

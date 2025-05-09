@@ -9,7 +9,7 @@ export const ProjectHero: React.FC<{
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   return (
     <div style={{ backgroundColor: projectColor || 'transparent' }}>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="grid grid-cols-4 lg:grid-cols-12 gap-y-8 gap-x-8 py-8 items-center">
           <div className="col-span-4 lg:col-span-6 md:col-span-2">
             <h1 className="mb-4 text-3xl md:text-5xl lg:text-6xl font-medium text-white">

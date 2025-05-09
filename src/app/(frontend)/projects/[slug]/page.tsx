@@ -59,7 +59,7 @@ export default async function Project({ params: paramsPromise }: Args) {
       <ProjectHero project={project} />
 
       <div className="flex flex-col items-center gap-4 pt-8">
-        <div className="container">
+        <div className="container mx-auto">
           <RichText className="" data={project.content} enableGutter={false} />
         </div>
       </div>

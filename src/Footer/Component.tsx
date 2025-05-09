@@ -15,7 +15,7 @@ export async function Footer() {
 
   return (
     <footer className="mt-auto border-t border-border">
-      <div className="container py-4 gap-8 flex flex-col md:flex-row md:justify-center">
+      <div className="container mx-auto py-4 gap-8 flex flex-col md:flex-row md:justify-center">
         {/* <Link className="flex items-center" href="/">
           <Logo />
         </Link> */}
