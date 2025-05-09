@@ -1,13 +1,6 @@
-import clsx from 'clsx'
 import React from 'react'
 
-interface Props {
-  className?: string
-  loading?: 'lazy' | 'eager'
-  priority?: 'auto' | 'high' | 'low'
-}
-
-export const Logo = ({ loading = 'lazy', priority = 'low', className }: Props) => {
+export const Logo = () => {
   return (
     <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
       <g clip-path="url(#clip0_118_113)">
